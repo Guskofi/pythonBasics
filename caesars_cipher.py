@@ -60,18 +60,21 @@ def caesars_code (input, action, shift):
                'v', 'w', 'x', 'y', 'z']
     output = ''
     for char in input:
-        if char not in letters:
+        if char.lower() not in letters:
             coded_letter = char
         else:
             for position in range(len(letters)):
-                if char == letters[position]:
+                if char.lower() == letters[position]:
                     if action == 'encode':
                         coded_letter = letters[(position + shift) % 26]
                     else:
                         coded_letter = letters[position - (shift % 26)]
             else:
                 pass
-        output += coded_letter
+        if char.isupper():
+            output += coded_letter.upper()
+        else:
+            output += coded_letter
     return output
 
 print(caesars_code (raw_message, action, shift))
