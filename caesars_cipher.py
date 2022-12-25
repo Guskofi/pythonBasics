@@ -1,5 +1,13 @@
-#This program is caesars code. the goal of the program is to decode or encode a
+#################################################################################
+#This program is caesars code. the goal of the program is to decode or encode a message
+#the user states whether they want to encode or decode a message
+#they add the message they want to encode/decode
+# enter a shift index which is how many letters forwards or backwards they want to replace a letter
+#for example encode a message with shft 13, "a" will be replaced with "n".
+##########################################################################################
+###############################################################
 # Give the user 3 chances to state his purpose if it fails
+#############################################################
 chance = 3
 while chance > 0:
     action = input('What do you want to do? decode or encode ')
@@ -13,7 +21,11 @@ while chance > 0:
         else:
             print(f'You have {chance} chances left before spies find you\n')
 
-#give the user 5 chances to enter their message
+###############################################################
+# Give the user 5 chances to add a message
+#############################################################
+
+
 chance = 5
 while chance > 0:
     raw_message = input(f'Please enter the phrase you want to {action} ')
@@ -27,7 +39,9 @@ while chance > 0:
         else:
             print(f'You have {chance} chances left before spies find you\n')
 
-#Give user 3 options to enter shift index
+###############################################################
+# Give the user 3 chances to add an index
+#############################################################
 chance = 3
 while chance > 0:
     if chance == 0:
