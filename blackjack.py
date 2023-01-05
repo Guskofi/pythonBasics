@@ -1,3 +1,10 @@
+#####################################################################################
+#this game simulates blackjack game between one player and dealer https://bicyclecards.com/how-to-play/blackjack/
+#Dealer deals out 2 cards in alternating manner to player and himself.both players card are shown but only dealers firstcard
+#player decides too hit (add cards to get closer to 21) or stand (no more cards). once he stands dealer(computer) selects cards till he has 17+ or bust
+#and the winner is decided. NB: Game cant do splits. used cards are removed from deck.
+###############################################################################################################
+
 import random
 
 def deal_card(old_cards_left):
